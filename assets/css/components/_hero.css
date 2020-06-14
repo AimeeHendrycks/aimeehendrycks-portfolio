@@ -35,7 +35,7 @@
 #hero-switcher-1 {
   min-width: 210px;
   @media (min-width: 768px) {
-    min-width: 360px;
+    min-width: 373px;
   }
 }
 

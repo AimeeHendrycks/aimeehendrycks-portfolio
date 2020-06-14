@@ -1,3 +1,7 @@
+.logo, .logo-mark {
+  cursor: default;
+}
+
 .logo-mark {
   @apply font-brand text-4xl;
   letter-spacing: -9px;

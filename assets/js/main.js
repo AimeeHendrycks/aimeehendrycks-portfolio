@@ -4,7 +4,7 @@ import Rellax from 'rellax';
 document.addEventListener('DOMContentLoaded', () => {
 
     $(function () {
-        const wordsArray1 = ['UX-focused', 'detail-oriented', 'fullstack', 'Craft CMS', 'mobile app', 'senior/lead'];
+        const wordsArray1 = ['UX-focused', 'detail-oriented', 'full stack', 'Craft CMS', 'mobile app', 'senior/lead'];
         let current1 = wordsArray1[Math.floor(Math.random() * wordsArray1.length)]
         $("#hero-switcher-1 span").text(current1);
         setInterval(function () {
