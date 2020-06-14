@@ -1,0 +1,47 @@
+.nav-item {
+  @apply mx-6 uppercase tracking-widest font-semibold;
+  position: relative;
+  &::after {
+    @apply bg-gold;
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    transition: width .2s ease;
+  }
+  &:hover, &:focus {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.email-link {
+  @apply mx-6 uppercase tracking-widest font-semibold flex items-center justify-center;
+  i {
+    transition: all .3s ease;
+  }
+  span {
+    position: relative;
+    &::after {
+      @apply bg-gold;
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -.5rem;
+      transition: width .2s ease;
+    }
+  }
+  &:hover, &:focus {
+    i {
+      transform: scale(1.3);
+    }
+    span::after {
+      width: 100%;
+    }
+  }
+}

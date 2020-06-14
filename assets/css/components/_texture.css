@@ -1,0 +1,62 @@
+.bg-texture {
+  position: absolute;
+  height: calc(75% - 1.5rem);
+  left: -50vw;
+  top: 1.5rem;
+  width: 100%;
+  background-repeat-x: no-repeat;
+  z-index: -1;
+  overflow: hidden;
+
+  @media (min-width: 640px) {
+    height: calc(85% - 1.5rem);
+    left: -30vw;
+  }
+  @media (min-width: 768px) {
+    left: -10vw;
+  }
+  @media (min-width: 1280px) {
+    left: 2rem;
+    width: calc(100% - 2rem);
+  }
+  @media (min-width: 1366px) {
+    left: 8rem;
+    width: calc(100% - 8rem)
+  }
+}
+
+.bracket {
+  position: relative;
+  height: 3.5rem;
+  display: inline-block;
+  /* background-color: white; */
+  @apply bg-gold;
+  width: 2px;
+
+  &::before, &::after {
+    content: "";
+    width: 5px;
+    height: 2px;
+    position: absolute;
+    @apply bg-gold;
+    
+  }
+
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+
+  &__left {
+    margin-right: 2rem;
+  }
+
+  &__right {
+    margin-left: 2rem;
+    &::before, &::after {
+      right: 0;
+    }
+  }
+}

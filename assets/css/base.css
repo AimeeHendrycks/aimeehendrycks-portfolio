@@ -1,0 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  letter-spacing: 1px;
+  @apply font-lato;
+}
+
+main {
+  position: relative;
+}

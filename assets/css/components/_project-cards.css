@@ -1,0 +1,81 @@
+.project-cards {
+  @apply flex flex-no-wrap px-2 pb-3 overflow-x-auto;
+  
+  &::-webkit-scrollbar {
+    height: 3px;
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+ 
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    border: 6rem solid rgba(0,0,0,0);
+    background-clip: padding-box;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: rgba(255,255,255,.4);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    @apply bg-gold;
+  }
+
+  &::after {
+    content: '';
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    @apply px-4;
+  }
+  @media (min-width: 768px) {
+    @apply px-20;
+    padding: 0 5rem 3rem;
+    &::after {
+      padding-right: 5rem;
+    }
+  }
+}
+
+.project-card {
+  @apply bg-white text-black mx-2 my-2;
+  width: 17rem;
+  min-width: 18vw;
+  flex-shrink: 0;
+  z-index: 10;
+  &__inner {
+    @apply px-4 py-4 flex flex-col h-full justify-between items-start;
+    @media (min-width: 768px) {
+      @apply px-8 py-6;
+    }
+  }
+  &__btn {
+    @apply inline-block px-3 py-1 mt-3 font-bold border-dark-blue;
+    border: 1px solid;
+    border-bottom-width: 4px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      @apply bg-dark-blue; 
+      height: 0;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transition: height .2s ease, color .2s ease;
+    }
+    &:hover, &:focus {
+      @apply border-dark-blue text-white;
+      &::after {
+        height: 100%;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    @apply mx-4;
+    width: 30rem;
+  }
+}
