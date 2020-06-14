@@ -46,9 +46,11 @@
   flex-shrink: 0;
   z-index: 10;
   &__inner {
-    @apply px-4 py-4 flex flex-col h-full justify-between items-start;
+    @apply px-4 py-4 flex flex-col justify-between items-start;
+    min-height: 440px;
     @media (min-width: 768px) {
       @apply px-8 py-6;
+      min-height: 360px;
     }
   }
   &__btn {
